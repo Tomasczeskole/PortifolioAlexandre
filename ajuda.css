@@ -1,0 +1,73 @@
+/* Limpa as específicações da página para não ter conflito e transforma a página em uma caixa fechada  */
+*{ 
+    box-sizing:border-box;
+    padding:0px;
+    margin:0px;
+}
+
+/* Container é o layout da página dividido por grids igual dnd */
+.container{
+    display:grid;
+}
+
+/* Cabeça da página para titulo, começando no grid1 e morrendo no 12 */
+header{
+    grid-column-start: 1;
+    grid-column-end:12;
+    background-color:grey;
+}
+
+/* Aba de menu começa no 6 e morre no 12 */
+.menu{
+    grid-column-start:6;
+    grid-column-end:12;
+    justify-content: center;
+    gap:20px;
+}
+
+/* imagem começa no 1 e morre no 3 */
+.imagem_leo{
+    grid-column-start:1;
+    grid-column-end:3;
+}
+
+/* a classe principal localizará suas coisas dentro do 4 a 12 com espaço dentro do grid até o texto com 15px pra esquerda e direita, mas colado no vertical */
+.principal{
+    grid-column-start:4;
+    grid-column-end:12;
+    padding-left:15px;
+    padding-right:15px;
+    text-align:justify;
+}
+
+/* Rodapé começa no 1 e morre no 12, fundo cinza e texto branco */
+footer{
+    grid-column-start:1;
+    grid-column-end:12;
+    background-color:grey;
+    color:white;
+}
+
+ul{
+    list-style-type:none;
+    color:red;
+}
+
+a:link{
+    text-decoration:none;
+    padding:8px 16px
+}
+
+li{
+    float:left;
+}
+
+a:hover{
+    background-color:brown;
+    color:white;
+}
+
+.card{
+    display:flex;
+    flex-flow: row wrap;
+}
